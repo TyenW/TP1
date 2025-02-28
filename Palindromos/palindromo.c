@@ -2,6 +2,7 @@
  * Universidade: Pontificia Universidade Catolica de Minas Gerais
  * Curso: Ciencia da Computacao
  * Disciplina: Algoritmos e Estruturas de Dados II
+ * Professor: Daniel de Oliveira Capanema e Gabriel Barbosa da Fonseca
  * Autor: Pedro Guimarães Alves Freitas 
  * Matricula: 804517
  * Data: 27/02/2025
@@ -16,10 +17,7 @@
 
 #include <stdio.h>
 #include <string.h>  // Adicionado para usar strlen e strcspn
-
-typedef int bool;
-#define true 1
-#define false 0
+#include <stdbool.h> // Adicionado para usar o tipo bool
 
 int main() {
     char frase[1000];
