@@ -51,5 +51,7 @@ public class palindromo {
                 System.out.println("NAO");
             }
         }
+        ler.close();
     }
+
 }

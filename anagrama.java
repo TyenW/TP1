@@ -31,6 +31,7 @@ public class anagrama {
             }
            
         }
+        ler.close();
 
     }
 

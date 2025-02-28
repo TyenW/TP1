@@ -30,6 +30,7 @@ public class is {
 
 
         }
+        ler.close();    
 
     }
     static void verifica(String frase,boolean x1, boolean x2, boolean x3, boolean x4){

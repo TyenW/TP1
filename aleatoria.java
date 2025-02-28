@@ -46,6 +46,7 @@ public class aleatoria {
             System.out.println(new String(frasef));
         }
 
+        ler.close();
     }
     static boolean isfim(String frase){
         boolean fim= true;

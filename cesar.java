@@ -24,12 +24,13 @@ public class cesar {
         Scanner ler =new Scanner(System.in);
         String frase;
         while (isfim(frase=ler.nextLine())) {
-            frase=cesar(frase);
+            frase=encrypt(frase);
             System.out.println(frase);
         }   
+        ler.close();
     }
 
-    static String cesar(String frase){
+    static String encrypt(String frase){
         char[] cesar= new char[frase.length()];
 
         for(int i=0; i<frase.length(); i++){

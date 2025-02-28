@@ -23,7 +23,7 @@ public class contagem {
             String[] palavras= frase.split(" ");
             System.out.println(palavras.length);
         }
-
+        ler.close();
 
     }
     static boolean isfim(String frase){
