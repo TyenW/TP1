@@ -1,5 +1,5 @@
-package Palindromos;
-import java.util.*;
+package Palindromos; // Pacote ao qual o programa está associado
+import java.util.Scanner;// Importa a classe Scanner para leitura de dados
 
 /******************************************************************
  * Universidade: Pontificia Universidade Catolica de Minas Gerais
@@ -21,11 +21,12 @@ import java.util.*;
 public class palindromo {
 
     public static void main(String[] args) {
+        // Scanner para leitura da entrada
         Scanner ler = new Scanner(System.in);
         String frase;
         boolean palindromo;
 
-        // Loop para ler múltiplas linhas de entrada
+        // Loop para ler múltiplas linhas de entrada até encontrar uma linha vazia
         while (ler.hasNextLine()) {
             frase = ler.nextLine();
             
@@ -51,6 +52,7 @@ public class palindromo {
                 System.out.println("NAO");
             }
         }
+        // Fecha o scanner
         ler.close();
     }
 

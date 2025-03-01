@@ -15,11 +15,12 @@
  * Saída: SIM se a frase for um palíndromo, ou NAO caso contrário.
  ******************************************************************/
 
-#include <stdio.h>
+#include <stdio.h>   // Adicionado para usar printf e fgets
 #include <string.h>  // Adicionado para usar strlen e strcspn
 #include <stdbool.h> // Adicionado para usar o tipo bool
 
 int main() {
+    // Declaração de variáveis
     char frase[1000];
     bool palindromo;
     
@@ -32,9 +33,9 @@ int main() {
         if (strlen(frase) == 0) {
             break;
         }
-        
+        // Inicializa a variável que indica se é palíndromo
         palindromo = true;
-        
+        // Calcula o tamanho da frase
         int len = strlen(frase);
         
         // Verifica se a frase é um palíndromo
@@ -52,6 +53,6 @@ int main() {
             printf("NAO\n");
         }
     }
-    
+    // Retorna 0 para indicar que o programa foi executado com sucesso
     return 0;
 }

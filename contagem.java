@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;// Importa a classe Scanner para leitura de dados
 
 /******************************************************************
  * Universidade: Pontificia Universidade Catolica de Minas Gerais
@@ -17,21 +17,36 @@ import java.util.*;
 
 public class contagem {
     public static void main(String[] args) {
+        // Scanner para leitura da entrada
         Scanner ler =new Scanner(System.in);
+        // String para armazenar a entrada
         String frase;
+
+        // Loop para ler múltiplas linhas de entrada até encontrar a palavra FIM
         while (isfim((frase=ler.nextLine()))) {
+
+            // Separa a frase em palavras e conta o número de palavras
             String[] palavras= frase.split(" ");
+
+            // Imprime o número de palavras
             System.out.println(palavras.length);
         }
+
+        // Fecha o scanner
         ler.close();
 
     }
+
+    // Função que verifica se a entrada é a palavra FIM
     static boolean isfim(String frase){
+        // Variável para armazenar se a entrada é FIM
         boolean fim= true;
 
+        // Se a entrada for FIM, retorna false
         if(frase.equals("FIM")){
             fim= false;
         }
+        // Retorna se a entrada é FIM
         return fim;
     }
 }
