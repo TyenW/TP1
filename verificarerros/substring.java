@@ -1,4 +1,3 @@
-package verificar_erros;
 import java.util.Scanner; // Importa a classe Scanner para leitura de dados
 
 //ver com o gabriel erro na questão!
@@ -58,7 +57,10 @@ public class substring {
             res = Math.max(res, j - i + 1);
             lastIndex[frase.charAt(j)] = j;
         }
-
+        if (res>=frase.length()){
+            return 0;
+            
+        }
         return res;
     }
 

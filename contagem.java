@@ -1,6 +1,6 @@
 import java.util.Scanner;// Importa a classe Scanner para leitura de dados
 
-/******************************************************************
+/****************   **************************************************
  * Universidade: Pontificia Universidade Catolica de Minas Gerais
  * Curso: Ciencia da Computacao
  * Disciplina: Algoritmos e Estruturas de Dados II
