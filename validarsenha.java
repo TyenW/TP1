@@ -1,4 +1,4 @@
-import java.io.PrintStream;
+import java.io.PrintStream;// Importa a classe PrintStream para impressão de dados
 import java.util.Scanner; // Importa a classe Scanner para leitura de dados
 import java.io.UnsupportedEncodingException; // Importa a classe UnsupportedEncodingException para tratamento de exceções
 
@@ -15,7 +15,7 @@ public class validarsenha {
             if (validar(senha)) {
                 System.out.println("SIM");
             } else {
-                System.out.println("NÃo");
+                MyIO.println("NÃO");
             }
         }
         ler.close();
@@ -24,10 +24,10 @@ public class validarsenha {
     // Função que verifica se a senha é válida, contendo ao menos 8 caracteres, uma letra minúscula, uma letra maiúscula e um caractere especial
     static boolean validar(String senha) {
         // Variáveis para armazenar se a senha é válida
-        boolean x1, x2, x3, x4;
+        boolean x1, x2, x3, x4, x5;
         boolean valido = false;
         // Inicializa as variáveis
-        x1 = x2 = x3 = x4 = false;
+        x1 = x2 = x3 = x4 = x5 = false;
 
         // Verifica se a senha tem ao menos 8 caracteres
         if (senha.length() >= 8) {
@@ -37,14 +37,29 @@ public class validarsenha {
         x2 = maiusculo(senha);
         x3 = minuscula(senha);
         x4 = especial(senha);
+        x5= hasNumber(senha);
          // Verifica se a senha é válida
-        if (x1 == true && x2 == true && x3 == true && x4 == true) {
+        if (x1 == true && x2 == true && x3 == true && x4 == true && x5 == true) {
             valido = true;
         }
         // Retorna se a senha é válida
 
     
         return valido;
+    }
+
+    // Função que verifica se a senha contém ao menos um número
+    static boolean hasNumber(String senha) {
+        // Loop para verificar se a senha contém ao menos um número
+        for (int i = 0; i < senha.length(); i++) {
+            // Utiliza a tabela ASCII para verificar se o caractere é um número,
+            // com valores de 48 a 57
+            if (senha.charAt(i) >= 48 && senha.charAt(i) <= 57) {
+                return true;
+            }
+        }
+        // Se não contém ao menos um número, retorna false
+        return false;
     }
 
     // Função que verifica se a senha contém um caractere especial

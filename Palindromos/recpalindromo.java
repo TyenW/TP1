@@ -1,4 +1,3 @@
-package Palindromos; // Pacote ao qual o programa está associado
 import java.util.Scanner; // Importa a classe Scanner para leitura de dados
 
 /******************************************************************
